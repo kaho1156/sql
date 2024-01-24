@@ -29,3 +29,26 @@ where r <=3
 ***** My solution:**
 
 delete a from person a, person b where a.email = b.email and a.id > b.id
+
+**Q4  Trips and Users**
+
+![image](https://github.com/kaho1156/sql/assets/98607667/83d818cd-89d6-409a-a5ac-3e7cb60b8471)
+
+***** My solution:**
+
+select base.D as "Day", ifnull(round(cancel.c_nt/base.total_cnt,2),0) as "Cancellation Rate" from
+(select  t.request_at as d, count(id) as total_cnt from Trips t join
+(select * from users where role = 'client' AND banned <> "Yes") as c on t.client_id = c.users_id
+join
+(select * from users where role = 'driver' AND banned <> "Yes") as d on t.driver_id = d.users_id
+group by t.request_at) as base
+left join
+(select  t.request_at as d, count(t.id) as c_nt  from Trips t
+join
+(select * from users where role = 'client' AND banned <> "Yes") as c on t.client_id = c.users_id
+join
+(select * from users where role = 'driver' AND banned <> "Yes") as d on t.driver_id = d.users_id
+where t.status like '%cancelled%'
+group by  t.request_at) as cancel
+on base.d = cancel.d
+where base.D between "2013-10-01" AND "2013-10-03"

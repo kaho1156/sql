@@ -72,4 +72,10 @@ group by customer_number
 order by count(order_number) desc) as r
 limit 1
 
+**Q7  Big Countries**
 
+![image](https://github.com/kaho1156/sql/assets/98607667/8d92f7ac-ccd4-431b-ac86-fc59556d38d4)
+
+***** My solution:**
+select name, population, area from world 
+where area >= 3000000 or population >= 25000000

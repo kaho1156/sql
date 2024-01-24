@@ -2,34 +2,8 @@ To showcase the sql query, I have selected my tasks done in leetcode (for detail
 
 Q1. 
 
-SQL Schema
-Table: Employee
+![image](https://github.com/kaho1156/sql/assets/98607667/d7295c3e-60bf-4a49-a62b-0fb3bc777c0d)
 
-+-------------+---------+
-| Column Name | Type    |
-+-------------+---------+
-| id          | int     |
-| name        | varchar |
-| salary      | int     |
-| managerId   | int     |
-+-------------+---------+
-
-Input: 
-Employee table:
-+----+-------+--------+-----------+
-| id | name  | salary | managerId |
-+----+-------+--------+-----------+
-| 1  | Joe   | 70000  | 3         |
-| 2  | Henry | 80000  | 4         |
-| 3  | Sam   | 60000  | Null      |
-| 4  | Max   | 90000  | Null      |
-+----+-------+--------+-----------+
-Output: 
-+----------+
-| Employee |
-+----------+
-| Joe      |
-+----------+
 
 *** My solution:
 

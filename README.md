@@ -77,5 +77,17 @@ limit 1
 ![image](https://github.com/kaho1156/sql/assets/98607667/8d92f7ac-ccd4-431b-ac86-fc59556d38d4)
 
 ***** My solution:**
+
 select name, population, area from world 
 where area >= 3000000 or population >= 25000000
+
+**Q8  Not Boring Movies**
+
+![image](https://github.com/kaho1156/sql/assets/98607667/5c28914f-cdcb-4e0d-a72f-efa7246a016b)
+
+***** My solution:**
+
+select * from cinema 
+where mod(id,2)<>0 and description not like '%boring%' 
+order by rating desc
+

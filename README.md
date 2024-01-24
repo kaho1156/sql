@@ -61,4 +61,15 @@ where base.D between "2013-10-01" AND "2013-10-03"
 
 select name from customer where referee_id <> 2 or referee_id is null
 
+**Q6  Customer Placing the Largest Number of Orders**
+
+![image](https://github.com/kaho1156/sql/assets/98607667/6790dd43-5d96-4bba-993f-3698dfdab810)
+
+***** My solution:**
+
+select r.customer_number from (select customer_number,count(order_number) as cnt from orders
+group by customer_number
+order by count(order_number) desc) as r
+limit 1
+
 

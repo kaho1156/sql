@@ -11,9 +11,6 @@ SELECT e.name as Employee
 FROM employee AS e INNER JOIN employee AS e1 ON e.managerId = e1.id
 where e.salary > e1.salary
 
-![image](https://github.com/kaho1156/sql/assets/98607667/860f6614-abe2-4573-ab7a-1ec1ed307daa)
-
-
 **Q2 Department Top Three Salaries**
 
 ![image](https://github.com/kaho1156/sql/assets/98607667/a3384346-4c8b-425d-870a-3e662a60349f)

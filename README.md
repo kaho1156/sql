@@ -1,6 +1,6 @@
 To showcase the sql query, I have selected my tasks done in leetcode (for details, can refer to the attached documents):
 
-Q1. 
+Q1 Employees Earning More Than Their Managers
 
 ![image](https://github.com/kaho1156/sql/assets/98607667/d7295c3e-60bf-4a49-a62b-0fb3bc777c0d)
 

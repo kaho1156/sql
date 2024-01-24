@@ -21,3 +21,11 @@ where e.salary > e1.salary
 select department.name as Department, e.name as Employee, e.salary as Salary from (select departmentID, name,salary, Dense_rank() over (partition by departmentid order by salary desc) as r from employee) as e
 join department on e.departmentid = department.id
 where r <=3
+
+**Q3 Delete Duplicate Emails**
+
+![image](https://github.com/kaho1156/sql/assets/98607667/474cde27-5287-4954-adb1-f0013eb9f93f)
+
+***** My solution:**
+
+delete a from person a, person b where a.email = b.email and a.id > b.id

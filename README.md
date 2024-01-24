@@ -52,3 +52,13 @@ where t.status like '%cancelled%'
 group by  t.request_at) as cancel
 on base.d = cancel.d
 where base.D between "2013-10-01" AND "2013-10-03"
+
+**Q5  Find Customer Referee**
+
+![image](https://github.com/kaho1156/sql/assets/98607667/1b7353ea-ec94-4cce-8983-04868462fb8c)
+
+***** My solution:**
+
+select name from customer where referee_id <> 2 or referee_id is null
+
+
